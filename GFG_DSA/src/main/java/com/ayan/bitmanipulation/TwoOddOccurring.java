@@ -9,7 +9,7 @@ public class TwoOddOccurring {
         for(int i: arr) {
             xor= xor ^ i;
         }
-        
+        return new int[]{};
     }
 
     public static void main(String[] args) {
