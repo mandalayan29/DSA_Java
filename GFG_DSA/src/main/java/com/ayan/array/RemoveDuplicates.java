@@ -6,23 +6,24 @@ import java.util.Arrays;
 public class RemoveDuplicates {
 
     public static int removeDuplicates1(int[] arr) {
+
         int len= 1;
 
         for(int i=1; i< arr.length; i++) {
-            if(arr[len-1]==arr[i]) {
+            if(arr[len-1]!=arr[i]) {
                 arr[len]=arr[i];
-            }
-            else
                 len++;
+            }
+//            else
+//                len++;
         }
-
         System.out.println(len);
+        System.out.println(Arrays.toString(arr));
         return len;
     }
 
     public static int[] removeDuplicates2(int[] arr) {
-
-            return arr;
+        return arr;
     }
 
     public static void main(String[] args) {
@@ -30,7 +31,6 @@ public class RemoveDuplicates {
         System.out.println(Arrays.toString(arr));
         removeDuplicates1(arr);
         System.out.println(Arrays.toString(arr));
-
     }
 
 }
